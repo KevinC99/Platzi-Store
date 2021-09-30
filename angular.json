@@ -1,5 +1,8 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "cli": {
+    "analytics": "bf82b841-f861-4154-886b-eb3405a6517f"
+  },
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
@@ -27,7 +30,10 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/swiper/dist/css/swiper.css",
               "src/styles.css"
+              
+
             ],
             "scripts": []
           },
