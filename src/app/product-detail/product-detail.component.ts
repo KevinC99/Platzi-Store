@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
-import { ProductsService } from './../products.service';
+import { ProductsService } from '../core/Services/Products/products.service';
 import { Product } from './../product.model';
 
 @Component({
@@ -27,6 +27,4 @@ export class ProductDetailComponent implements OnInit {
       this.product = nonUndef(this.productsService.getProduct(iD) as Product)
       });
   }
-
-
 }
