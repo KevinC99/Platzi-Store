@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
-import { ProductsService } from '../core/Services/Products/products.service';
-import { Product } from './../product.model';
+import { ProductsService } from './../../../core/services/products/products.service';
+import { Product } from './../../../core/models/product.model';
 
 @Component({
   selector: 'app-product-detail',
@@ -15,7 +15,7 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private productsService: ProductsService
+    private productsServices: ProductsService
   ) { }
 
   ngOnInit(){
@@ -24,7 +24,9 @@ export class ProductDetailComponent implements OnInit {
       function nonUndef(test: Product){
         return test
       }
-      this.product = nonUndef(this.productsService.getProduct(iD) as Product)
+      this.product = nonUndef(this.productsServices.getProduct(iD) as Product)
       });
   }
+
+
 }
