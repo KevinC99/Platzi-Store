@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-
-import { ProductsService } from './../../../core/services/products/products.service';
+import { ProductsService } from './../../../core/Services/Products/products.service';
 import { Product } from './../../../core/models/product.model';
 
 @Component({
@@ -15,18 +14,16 @@ export class ProductDetailComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private productsServices: ProductsService
+    private productsService: ProductsService
   ) { }
-
   ngOnInit(){
     this.route.params.subscribe((params: Params) => {
       const iD = params.id;
       function nonUndef(test: Product){
         return test
       }
-      this.product = nonUndef(this.productsServices.getProduct(iD) as Product)
+      this.product = nonUndef(this.productsService.getProduct(iD) as unknown as Product)
       });
+    }
+    
   }
-
-
-}
