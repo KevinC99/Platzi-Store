@@ -10,7 +10,8 @@ import { Product } from './../../../core/models/product.model';
 })
 export class ProductDetailComponent implements OnInit {
 
-  product!: Product;
+  products: Product[]=[];
+  prod!: Product; 
 
   constructor(
     private route: ActivatedRoute,
@@ -19,11 +20,24 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit(){
     this.route.params.subscribe((params: Params) => {
       const iD = params.id;
+
       function nonUndef(test: Product){
         return test
       }
-      this.product = nonUndef(this.productsService.getProduct(iD) as unknown as Product)
-      });
-    }
-    
+      //this.product = nonUndef(this.productsService.getProduct(iD) as unknown as Product)
+      this.fetchProducts(iD);
+    });
+  
   }
+
+  fetchProducts(iD : string){
+    this.productsService.getAllProducts()
+    .subscribe(products => {
+      this.products = products.filter(product => product.id === iD);
+      this.prod = this.products[0]
+      console.log(products.find(products => products.id === iD))
+      console.log(iD)
+    });
+  }
+
+}

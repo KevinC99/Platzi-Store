@@ -5,6 +5,7 @@ import { Product } from './../../models/product.model';
 @Injectable({
   providedIn: 'root'
 })
+
 export class ProductsService {
 
   constructor(
@@ -13,9 +14,5 @@ export class ProductsService {
 
   getAllProducts() {
     return this.http.get <Product[]> ('http://platzi-store.herokuapp.com/products/');
-  }
-
-  getProduct(id: string) {
-    return this.http.get <Product>(`http://platzi-store.herokuapp/${id}`);
   }
 }
