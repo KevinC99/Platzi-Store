@@ -4,13 +4,14 @@
 </div>
 <div class= "txt"> 
   <ul>
+    <br>
     <li class="title">{{ prod.title }}</li>
-    <li> {{ prod.price | currency }}</li>
-    <li>{{ prod.description }}</li>
+    <br>
+    <li class="mony"> {{ prod.price | currency }}</li>
+    <li class="description">{{ prod.description }}</li>
   
   <a mat-raised-button>
-    <span class="material-icons"> add shopping cart icon </span>
-    Comprar
+    <span class="material-icons">add_shopping_cart</span>
   </a>
 </ul>
 </div>

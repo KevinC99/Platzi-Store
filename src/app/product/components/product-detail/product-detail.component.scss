@@ -12,8 +12,22 @@ div.padre{
 }
 li{
     list-style: none;
-    margin: 10px;    
+    margin: 10px;
 }
-li.title{
+li.mony{
+    font-size:30px;
+    text-align:center;
+}  
+li.description{
     font-size: 30px;
+    text-align: center;
+}
+
+
+li.title{
+    font-size: 50px;
+    text-align: center;
+}
+span{
+    width: 300px;   
 }
