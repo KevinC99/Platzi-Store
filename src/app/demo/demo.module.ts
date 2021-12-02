@@ -5,15 +5,18 @@ import { DemoComponent } from './components/demo/demo.component';
 
 import { DemoRoutingModule } from './demo-routing.module';
 import { SharedModule } from './../shared/shared.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     DemoComponent,
+    
   ],
   imports: [
     CommonModule,
     SharedModule,
-    DemoRoutingModule
+    DemoRoutingModule,
+    FormsModule,
   ]
 })
 export class DemoModule {

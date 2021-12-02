@@ -2,6 +2,9 @@ div.imagen {
     width: 70%; 
     height: 70%;
 }
+div.botones {
+    position: center;
+}
 img{
     width: 100%; 
     height: 100%;
@@ -12,7 +15,7 @@ div.padre{
 }
 li{
     list-style: none;
-    margin: 10px;
+    margin: 30px;
 }
 li.mony{
     font-size:30px;
@@ -22,12 +25,15 @@ li.description{
     font-size: 30px;
     text-align: center;
 }
-
-
 li.title{
-    font-size: 50px;
+    font-size: 30px;
     text-align: center;
 }
 span{
-    width: 300px;   
+    width: 200px; 
+    
+}
+a{
+    width: 250px; 
+    margin-top: 20px;
 }

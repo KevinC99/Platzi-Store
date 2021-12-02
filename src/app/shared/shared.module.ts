@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 
 import { MaterialModule } from '../material/material.module';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { MaterialModule } from '../material/material.module';
     HighlightDirective,
     HeaderComponent,
     FooterComponent,
+    CartComponent
   ],
   exports: [
     ExponentialPipe,

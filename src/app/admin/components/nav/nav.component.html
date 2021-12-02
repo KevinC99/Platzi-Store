@@ -1,3 +1,4 @@
+
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -8,6 +9,8 @@
       <a mat-list-item routerLink="/admin/create">Crear Producto</a>
       <a mat-list-item routerLink="/admin/table">Crear una Tabla</a>
       <a mat-list-item routerLink="/admin/dashboard">Dashboard</a>
+      <a mat-list-item routerLink="/home">Inicio</a>
+      <a mat-list-item routerLink="/admin/product-list">Products</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
