@@ -18,7 +18,7 @@ import{MatIconModule} from '@angular/material/icon';
     AdminRoutingModule,
     ReactiveFormsModule,
     MaterialModule,
-    MatIconModule
+    MatIconModule,
   ]
 })
 export class AdminModule { }

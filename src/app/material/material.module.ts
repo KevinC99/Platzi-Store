@@ -37,12 +37,14 @@ import { MatSortModule } from '@angular/material/sort';
     MatMenuModule,
     LayoutModule,
     MatSortModule,
+    MatBadgeModule
 
   ],
   exports: [
+    CommonModule,
     MatButtonModule,
     MatToolbarModule,
-    MatBadgeModule,
+    MatIconModule,
     MatCardModule,
     MatInputModule,
     MatSelectModule,
@@ -54,6 +56,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatPaginatorModule,
     MatMenuModule,
     LayoutModule,
+    MatSortModule,
+    MatBadgeModule
   ]
 })
 export class MaterialModule { }

@@ -9,6 +9,7 @@ import { FooterComponent } from './components/footer/footer.component';
 
 import { MaterialModule } from '../material/material.module';
 import { CartComponent } from './components/cart/cart.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,12 +24,14 @@ import { CartComponent } from './components/cart/cart.component';
     HighlightDirective,
     HeaderComponent,
     FooterComponent,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ],
   imports: [
     CommonModule,
     RouterModule,
     MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class SharedModule { }
