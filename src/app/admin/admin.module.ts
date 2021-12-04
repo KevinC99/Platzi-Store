@@ -10,9 +10,10 @@ import { TableComponent } from './components/table/table.component';
 import { DasboardComponent } from './components/dasboard/dasboard.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import{MatIconModule} from '@angular/material/icon';
+import { FormProductComponent } from './components/form-product/form-product.component';
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, TableComponent, DasboardComponent, ProductsListComponent,],
+  declarations: [ProductFormComponent, NavComponent, TableComponent, DasboardComponent, ProductsListComponent, FormProductComponent,],
   imports: [
     CommonModule,
     AdminRoutingModule,

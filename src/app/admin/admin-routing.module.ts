@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DasboardComponent } from './components/dasboard/dasboard.component';
+import { FormProductComponent } from './components/form-product/form-product.component';
 import { NavComponent } from './components/nav/nav.component';
 import { ProductFormComponent } from './components/product-form/product-form.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
@@ -26,6 +27,10 @@ path: '',
       path: 'product-list',
       component: ProductsListComponent,
     },
+    {
+      path: 'product-list/create',
+      component: FormProductComponent,
+    }
   ]
 }
 ];
