@@ -8,7 +8,8 @@ import { Product } from './../../../core/models/product.model';
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent implements OnInit {
-  prod!: Product; 
+  prod!: Product;
+  product!: "";
 
   constructor(
     private route: ActivatedRoute,

@@ -11,9 +11,10 @@ import { DasboardComponent } from './components/dasboard/dasboard.component';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import{MatIconModule} from '@angular/material/icon';
 import { FormProductComponent } from './components/form-product/form-product.component';
+import { UpdateProductComponent } from './components/update-product/update-product.component';
 
 @NgModule({
-  declarations: [ProductFormComponent, NavComponent, TableComponent, DasboardComponent, ProductsListComponent, FormProductComponent,],
+  declarations: [ProductFormComponent, NavComponent, TableComponent, DasboardComponent, ProductsListComponent, FormProductComponent, UpdateProductComponent,],
   imports: [
     CommonModule,
     AdminRoutingModule,

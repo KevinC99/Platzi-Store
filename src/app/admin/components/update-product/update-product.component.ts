@@ -1,24 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder,FormGroup,Validators } from '@angular/forms';
 import { ProductsService } from 'src/app/core/Services/Products/products.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { my_validator } from 'src/app/utils/validators';
+import { Product } from 'src/app/core/models/product.model';
 @Component({
-  selector: 'app-form-product',
-  templateUrl: './form-product.component.html',
-  styleUrls: ['./form-product.component.css']
+  selector: 'app-update-product',
+  templateUrl: './update-product.component.html',
+  styleUrls: ['./update-product.component.css']
 })
-export class FormProductComponent implements OnInit {
-form!:FormGroup;
+export class UpdateProductComponent implements OnInit {
+  form!:FormGroup;
+  prod!:Product
+  product!:"";
   constructor(
   private formBuilder: FormBuilder,
   private productsService: ProductsService,
-  private router: Router
+  private router: Router,
+  private route: ActivatedRoute
   ) {
     this.buildForm();
+    this.fetchProduct('product');
   }
 
   ngOnInit(): void {
+    this.route.params.subscribe((params: Params) => {
+      this.fetchProduct(params.id);
+    });
   }
   saveProdsuccessfully(event:Event){
   event.preventDefault();
@@ -45,5 +53,11 @@ form!:FormGroup;
  get priceField(){
    return this.form.get('price')
  }
+  private fetchProduct(id : string){
+  this.productsService.getProduct(id)
+  .subscribe(product => {
+    this.prod = product
+    console.log(product)
+  });
 }
-
+}
