@@ -33,7 +33,7 @@ path: '',
       component: FormProductComponent,
     },
     {
-      path: 'product-list/update',
+      path: 'product-list/update/:id',
       component:UpdateProductComponent,
     }
   ]

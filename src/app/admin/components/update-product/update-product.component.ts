@@ -20,12 +20,19 @@ export class UpdateProductComponent implements OnInit {
   private route: ActivatedRoute
   ) {
     this.buildForm();
-    this.fetchProduct('product');
   }
 
   ngOnInit(): void {
     this.route.params.subscribe((params: Params) => {
       this.fetchProduct(params.id);
+    });
+  
+  }
+  fetchProduct(id : string){
+    this.productsService.getProduct(id)
+    .subscribe(product => {
+      this.prod = product
+      console.log(this.prod)
     });
   }
   saveProdsuccessfully(event:Event){
@@ -39,11 +46,10 @@ export class UpdateProductComponent implements OnInit {
       });
     }
 }
-
  private buildForm(){
    this.form=this.formBuilder.group({
-     id:['',[Validators.required]],
-     tittle:['',[Validators.required]],
+     id: [],
+     tittle:[,[Validators.required]],
      price:['',[Validators.required,
        my_validator.isPriceValid]],
      image:'',
@@ -53,11 +59,4 @@ export class UpdateProductComponent implements OnInit {
  get priceField(){
    return this.form.get('price')
  }
-  private fetchProduct(id : string){
-  this.productsService.getProduct(id)
-  .subscribe(product => {
-    this.prod = product
-    console.log(product)
-  });
-}
 }
