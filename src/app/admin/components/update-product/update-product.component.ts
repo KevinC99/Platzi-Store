@@ -39,21 +39,20 @@ export class UpdateProductComponent implements OnInit {
   event.preventDefault();
     if(this.form.valid){
       const product= this.form.value;
-      this.productsService.createProduct(product)
-      .subscribe((newProduct) =>{
-        console.log(newProduct);
+      this.productsService.updateProduct(this.prod.id,product)
+      .subscribe((product) =>{
+        console.log(product);
         this.router.navigate(['./admin/product-list'])
       });
     }
 }
  private buildForm(){
    this.form=this.formBuilder.group({
-     id: [],
-     tittle:[,[Validators.required]],
+    //  title:['',[Validators.required]],
      price:['',[Validators.required,
        my_validator.isPriceValid]],
-     image:'',
      description:['',Validators.required],
+     image:['',[Validators.required]]
    })
  }
  get priceField(){

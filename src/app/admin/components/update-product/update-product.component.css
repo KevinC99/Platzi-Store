@@ -7,8 +7,12 @@ div.image{
     height: 50%; 
 }
 mat-card.padre{
-    display: flex;
+    display:flex;
+    position: relative;
 }
 mat-card-title{
     text-align: center;
+}
+mat-card-content{
+    margin-left: 10px;
 }

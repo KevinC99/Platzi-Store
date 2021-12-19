@@ -45,11 +45,12 @@ export class ProductDetailComponent implements OnInit {
     });
   }
   updateProduct(){
-    const updateProduct: Partial<Product> ={
-      price: 555555,
-      description: 'edicion de titulo'
+    const updateProduct: Partial<Product> ={ 
+      id: this.prod.id,
+      title:this.prod.title,
+      image:this.prod.image
     }
-    this.productsService.updateProduct( "2",updateProduct)
+    this.productsService.updateProduct( this.prod.id,updateProduct)
     .subscribe(product => {
       console.log(product)
     });

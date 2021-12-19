@@ -6,22 +6,28 @@
         <div class=image>
             <img [src]="prod.image" alt="">
          </div>
-        
         <mat-card-content>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-xs">
                     <mat-form-field>
                         <input [placeholder]="prod.id" formControlName="id" matInput type="text">
                     </mat-form-field>
                 </div>
-            </div>
+            </div>  -->
             <div class="row">
                 <div class="col-xs">
                     <mat-form-field>
-                        <input [placeholder]="prod.title" formControlName="tittle" matInput type="text">
+                        <input placeholder="Url de Imagen" formControlName="image" matInput type="text">
                     </mat-form-field>
                 </div>
             </div>
+            <!-- <div class="row">
+                <div class="col-xs">
+                    <mat-form-field>
+                        <input [placeholder]="prod.title" formControlName="title" matInput type="text">
+                    </mat-form-field>
+                </div>
+            </div> -->
             <div class="row">
                 <div class="col-xs">
                     <mat-form-field> 
@@ -39,11 +45,11 @@
                         <textarea [placeholder]="prod.description" formControlName="description" matInput type="text"></textarea>
                     </mat-form-field>
                     <mat-card-actions>
-                        <button [disabled]="form.invalid" mat-raised-button color="primary" type="submit">Crear</button>
+                        <button [disabled]="form.invalid" mat-raised-button color="primary" type="submit">Actualizar</button>
                     </mat-card-actions>
-                    
                 </div>
             </div>
+
         </mat-card-content>
 
     </mat-card>
