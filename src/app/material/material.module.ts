@@ -17,6 +17,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatMenuModule } from '@angular/material/menu';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSortModule } from '@angular/material/sort';
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   declarations: [],
@@ -37,7 +38,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatMenuModule,
     LayoutModule,
     MatSortModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatStepperModule
 
   ],
   exports: [
@@ -57,7 +59,8 @@ import { MatSortModule } from '@angular/material/sort';
     MatMenuModule,
     LayoutModule,
     MatSortModule,
-    MatBadgeModule
+    MatBadgeModule,
+    MatStepperModule
   ]
 })
 export class MaterialModule { }
