@@ -18,6 +18,10 @@ body {
   margin-left: auto;
 }
 
+.container-swiper {
+  
+}
+
 @media (min-width: 576px) {
   .product-grid {
     grid-template-columns: repeat(3, 1fr);
