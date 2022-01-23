@@ -1,23 +1,29 @@
-<form >
-    <div class="container">
-        <mat-card>
-            <div class="enter">
-         <div class="u">
-            <mat-form-field appearance="fill">
-                <mat-label>Usuario</mat-label>
-                <input matInput>
+<div class="content">
+<form [formGroup]="form" (ngSubmit)="register($event)">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Registro</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="row">
+          <div class="col-xs">
+            <mat-form-field>
+              <input placeholder="email" formControlName="email" matInput type="email">
             </mat-form-field>
+          </div>
         </div>
-        <div class="c">
-            <mat-form-field appearance="fill">
-                <mat-label>Contraseña</mat-label>
-                <input matInput>
+        <div class="row">
+          <div class="col-xs">
+            <mat-form-field>
+              <input placeholder="password" formControlName="password" matInput type="password">
             </mat-form-field>
+          </div>
         </div>
-        <div class="b">
-        <button mat-raised-button color="primary">Registrarse</button>
-        </div>
-        </div>
-        </mat-card>
-    </div>
-    </form>
+      </mat-card-content>
+      <mat-card-actions>
+        <button [disabled]="form.invalid" mat-raised-button type="submit">Registro</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+
+</div>

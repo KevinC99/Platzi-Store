@@ -1,24 +1,31 @@
-<form >
-<div class="container">
-    <mat-card>
-        <div class="enter">
-     <div class="u">
-        <mat-form-field appearance="fill">
-            <mat-label>Usuario</mat-label>
-            <input matInput>
-        </mat-form-field>
-    </div>
-    <div class="c">
-        <mat-form-field appearance="fill">
-            <mat-label>Contraseña</mat-label>
-            <input matInput>
-        </mat-form-field>
-    </div>
-    <div class="b">
-    <button mat-raised-button routerLink="../../home"color="primary">Ingresar</button>
-    <a mat-raised-button color="warn" routerLink="/auth/register"> Registrarse</a>
-    </div>
-    </div>
-    </mat-card>
+<div class="content">
+    <form [formGroup]="form" (ngSubmit)="login($event)">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Login</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="row">
+              <div class="col-xs">
+                <mat-form-field>
+                  <input placeholder="email" formControlName="email" matInput type="email">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs">
+                <mat-form-field>
+                  <input placeholder="password" formControlName="password" matInput type="password">
+                </mat-form-field>
+              </div>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <button [disabled]="form.invalid" mat-raised-button type="submit">Login</button>
+            <div class="button">
+            <button mat-raised-button routerLink="/auth/register"> Registrarse</button>
+          </div>
+          </mat-card-actions>
+        </mat-card>
+      </form>
 </div>
-</form>
