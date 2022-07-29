@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,FormGroup,Validators } from '@angular/forms';
+import { UntypedFormBuilder,UntypedFormGroup,Validators } from '@angular/forms';
 import { ProductsService } from 'src/app/core/Services/Products/products.service';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { my_validator } from 'src/app/utils/validators';
@@ -10,11 +10,11 @@ import { Product } from 'src/app/core/models/product.model';
   styleUrls: ['./update-product.component.css']
 })
 export class UpdateProductComponent implements OnInit {
-  form!:FormGroup;
+  form!:UntypedFormGroup;
   prod!:Product
   product!:"";
   constructor(
-  private formBuilder: FormBuilder,
+  private formBuilder: UntypedFormBuilder,
   private productsService: ProductsService,
   private router: Router,
   private route: ActivatedRoute

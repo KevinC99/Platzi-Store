@@ -1,5 +1,5 @@
 import { Component, OnInit,OnChanges, SimpleChanges } from '@angular/core';
-import { FormBuilder,FormGroup,Validators } from '@angular/forms';
+import { UntypedFormBuilder,UntypedFormGroup,Validators } from '@angular/forms';
 import { ProductsService } from 'src/app/core/Services/Products/products.service';
 import { Router } from '@angular/router';
 import { my_validator } from 'src/app/utils/validators';
@@ -12,10 +12,10 @@ import { finalize, Observable,} from 'rxjs';
   styleUrls: ['./form-product.component.css']
 })
 export class FormProductComponent implements OnInit {
-form!:FormGroup;
+form!:UntypedFormGroup;
 image$!:Observable<any>;
   constructor(
-  private formBuilder: FormBuilder,
+  private formBuilder: UntypedFormBuilder,
   private productsService: ProductsService,
   private router: Router,
   private storage: AngularFireStorage
