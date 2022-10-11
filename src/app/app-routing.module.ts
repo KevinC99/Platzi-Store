@@ -4,16 +4,15 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 
 import { AdminGuard } from './admin.guard';
-
 const routes: Routes = [
   {
       path: '',
-      redirectTo: 'auth',
+      redirectTo: 'home',
       pathMatch: 'full',
     },
     {
-      path: 'auth',
-      loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+      path: 'admin',
+      loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
     },
     {
     path: '',
@@ -38,7 +37,7 @@ const routes: Routes = [
       {
         path:'order',
         loadChildren: () => import('./order/order.module').then(m => m.OrderModule)
-      } 
+      }
     ]
   },
   {
