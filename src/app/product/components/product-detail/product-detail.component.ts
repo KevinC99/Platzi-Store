@@ -19,14 +19,14 @@ export class ProductDetailComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       this.fetchProduct(params.id);
     });
-  
+
   }
 
   fetchProduct(id : string){
     this.productsService.getProduct(id)
     .subscribe(product => {
       this.prod = product
-      console.log(product)
+      console.log(this.prod)
     });
   }
   createProduct(){
@@ -45,7 +45,7 @@ export class ProductDetailComponent implements OnInit {
     });
   }
   updateProduct(){
-    const updateProduct: Partial<Product> ={ 
+    const updateProduct: Partial<Product> ={
       id: this.prod.id,
       title:this.prod.title,
       image:this.prod.image

@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "zip": "npm-build-zip --source=dist/Platzi-Store"
   },
   "private": true,
   "dependencies": {
@@ -43,6 +44,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.1",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "npm-build-zip": "^1.0.3",
     "typescript": "^4.7.4"
   }
 }

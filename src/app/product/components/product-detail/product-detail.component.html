@@ -1,19 +1,19 @@
 <div class="container">
-  <div class="padre" *ngIf="prod" >
+  <div class="padre" *ngIf="prod">
     <div class="imagen">
       <mat-card><img [src]="prod.image" alt=""></mat-card>
     </div>
-    <div class= "txt"> 
+    <div class= "txt">
       <ul>
         <br>
           <li class="title">{{ prod.title }}</li>
           <li class="mony"> {{ prod.price | currency }}</li>
           <li class="description">{{ prod.description }}</li>
         <div class="botones">
-          <a mat-raised-button><span class="material-icons">add_shopping_cart</span></a> 
-          <a mat-raised-button (click)="createProduct()">Crear</a>
+          <a mat-raised-button><span class="material-icons">add_shopping_cart</span></a>
+          <!-- <a mat-raised-button (click)="createProduct()">Crear</a>
           <a mat-raised-button (click)="updateProduct()">Update</a>
-          <a mat-raised-button (click)="deleteProduct()">Delete</a>
+          <a mat-raised-button (click)="deleteProduct()">Delete</a> -->
         </div>
       </ul>
     </div>

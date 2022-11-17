@@ -39,13 +39,9 @@ export class HeaderComponent implements OnInit {
 
     cf.on(Event.CHANGED, flagInfo => {
       if (flagInfo.value) {
-        console.log('Flag is deleted')
-        console.log(JSON.stringify(flagInfo, null, 2))
         this.mensaje =''
 
       } else {
-        console.log(JSON.stringify(flagInfo, null, 2))
-        console.log('Flag is changed')
         this.mensaje ='mostrar'
       }
     })

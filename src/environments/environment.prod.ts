@@ -1,6 +1,6 @@
 export const environment = {
   production: true,
-  url_api: 'https://platzi-store.herokuapp.com/products',
+  url_api: 'https://localhost:3000/productos',
   firebase: {
     apiKey: "AIzaSyB3oVqT4riwD-jC7duplj_XXUhrt2C6TZI",
     authDomain: "peachbody-shop.firebaseapp.com",

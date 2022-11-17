@@ -26,7 +26,7 @@ export class UpdateProductComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       this.fetchProduct(params.id);
     });
-  
+
   }
   fetchProduct(id : string){
     this.productsService.getProduct(id)
@@ -48,7 +48,7 @@ export class UpdateProductComponent implements OnInit {
 }
  private buildForm(){
    this.form=this.formBuilder.group({
-    //  title:['',[Validators.required]],
+     title:['',[Validators.required]],
      price:['',[Validators.required,
        my_validator.isPriceValid]],
      description:['',Validators.required],
