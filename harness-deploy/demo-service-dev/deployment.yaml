@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{.Values.name}}
+  labels:
+    app: {{.Values.name}}
+    app.kubernetes.io/name: {{.Values.name}}
+    app.kubernetes.io/component: {{.Values.name}}
+spec:
+  replicas: {{int .Values.replicas}}
+  selector:
+    matchLabels:
+      app: {{.Values.name}}
+      app.kubernetes.io/name: {{.Values.name}}
+      app.kubernetes.io/component: {{.Values.name}}
+  template:
+    metadata:
+      labels:
+        app: {{.Values.name}}
+        app.kubernetes.io/name: {{.Values.name}}
+        app.kubernetes.io/component: {{.Values.name}}
+    spec:
+      containers:
+      - name: {{.Values.name}}
+        image: {{.Values.image}}
+        imagePullPolicy: {{.Values.imagePolicy}}
+        ports:
+        - containerPort: {{.Values.servicePort}}
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /
+            port: 80
+            scheme: HTTP
+          initialDelaySeconds: 30
+          periodSeconds: 30
+          successThreshold: 1
+          timeoutSeconds: 2
