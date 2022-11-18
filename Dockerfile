@@ -1,3 +1,4 @@
-FROM nginx:alpine
-COPY /dist/app-to-run-inside-docker /usr/share/nginx/html
-EXPOSE 8080
+FROM nginx:stable-alpine
+COPY . /usr/share/nginx/html
+EXPOSE 80
+CMD [ "nginx", "-g", "daemon off" ]
